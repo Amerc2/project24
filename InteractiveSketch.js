@@ -39,6 +39,9 @@ function draw() {
     
   }
   
+
+
+  
   strokeWeight(1)
 
 
@@ -126,12 +129,17 @@ function draw() {
   fill(11, 115, 39)
   ellipse(2025, 400, 80, 60)
 
+  if(mouseIsPressed == true){
+  image(fire, 250, 200, 500, 500)
+}
 
 }   
+
 
 function keyPressed(key = 'n'){
   nightBool = true
   dayBool = false
+  
   } 
   
 function day(){
@@ -141,7 +149,6 @@ function day(){
 
 function night(){
 
-
   background(4, 15, 33)
 //moon
     fill(97, 95, 90)
@@ -149,10 +156,12 @@ function night(){
 //grass
   fill(5, 92, 15)
   rect(00, 500 , windowWidth, )
-createImage(fire, 500, 300, 50, 50)
-
+if(nightBool = true){
+  image(wherewolf, 800, 500, 400,200)
+}
 
 }
+
 
 function windowResized(){
   resizeCanvas(windowWidth, windowHeight)
