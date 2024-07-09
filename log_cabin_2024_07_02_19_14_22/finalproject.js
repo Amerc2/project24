@@ -14,7 +14,7 @@ let playing = false
 function preload(){
 
 aim = loadFont('aim/Aim High.ttf')
-reword = createVideo('RickRoll.mp4')
+reword = createVideo('RickRollshort.mp4')
 
 }
 
