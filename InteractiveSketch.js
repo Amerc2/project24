@@ -131,7 +131,7 @@ function draw() {
 
   if(mouseIsPressed == true){
   image(fire, 250, 200, 500, 500)
-}
+  }
 
 }   
 
