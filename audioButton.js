@@ -1,6 +1,6 @@
 let canvas
 
-let platButton
+let playButton
 
 let r = 0
 let g = 0

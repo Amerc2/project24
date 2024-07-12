@@ -59,6 +59,8 @@ function preload(){
 	knight = loadImage("images/2.png")
 	warehouse = loadImage('warehouse.gif')
 	hell = loadImage('images/hell.png')
+	playButton = createButton('Play Reward')
+	winknight = loadImage('images/winknight.jpg')
 
 
 }
@@ -72,13 +74,13 @@ function setup(){
 	canvas.position(0, 0)
 	//randImage = int(random(targetArray.length))
 	reward.hide()
-
-
+	playButton.hide()
+	playButton.mousePressed(playVid)
 	// knightSpeedX = random(-3, 3)
 	//  knightSpeedY = random(-3, 3)
 }
 
-function draw(){
+function draw(){	
 
 	if(menuBool == true){
 		menu()
@@ -346,7 +348,7 @@ function easy(){
 	 }
 	 //print(timer)
 
-	 if(score == 10){
+	 if(score == 15){
 	 	easyBool = false
 	 	winBool = true
 	 }
@@ -449,7 +451,7 @@ function easy(){
 	 }
 	 //print(timer)
 
-	 if(score == 10){
+	 if(score == 15){
 	 	easyBool = false
 	 	winBool = true
 	 }
@@ -550,7 +552,7 @@ function easy(){
 	 }
 	 //print(timer)
 
-	 if(score == 10){
+	 if(score == 15){
 	 	easyBool = false
 	 	winBool = true
 	 }
@@ -564,10 +566,33 @@ function easy(){
 
 	function win(){
 
-		background(0)
-		
+		background(winknight)
+		imageMode(CORNERS)
+		playButton.show()
+
 //rick roll button
-if(playing){
+// if(playing = true){
+// 		reward.hide()
+// 		reward.pause()
+// 		playButton.html('Play Reword')
+// 	}else{
+// 		reward.show()
+// 		reward.loop()
+// 		playButton.html('Pause Reword')	
+		
+// 	}
+
+	fill(255)
+	textSize(50)
+	textFont(aim)
+	text('YOU WIN',900, 600)
+
+
+	}
+
+	function playVid(){
+		background(0)
+	if(playing){
 		reward.hide()
 		reward.pause()
 		playButton.html('Play Reword')
@@ -575,9 +600,10 @@ if(playing){
 		reward.show()
 		reward.loop()
 		playButton.html('Pause Reword')	
+		
 	}
 
-
+ 	playing = !playing
 	}
 
 	function lose(){
