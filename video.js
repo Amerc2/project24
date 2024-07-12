@@ -36,7 +36,7 @@ function playVid(){
 		playButton.html('Pause Video')	
 	}
 
-
+ playing = !playing
 }
 
 

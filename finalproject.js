@@ -256,6 +256,8 @@ function keyPressed(){
 		timerE = 60
 		timerM = 30
 		timerH = 15	
+
+		score = 0
 	}
 
 }
@@ -264,10 +266,12 @@ function easy(){
 	imageMode(CORNERS)
 	background(warehouse) 
 //timer
+	textFont(aim)
 	textSize(50);
 	text(timerE, 0, 50);
 //print(targetArray)
 	textSize(70)
+	textFont(aim)
 	fill(255, 247, 10)
 	text('Slay the enemys! Your score is ' + score + ' points!!',200, 100)
 
@@ -365,10 +369,12 @@ function easy(){
 		imageMode(CORNERS)
 		background(warehouse)
 //timer
+	textFont(aim)
 	textSize(50);
 	text(timerM, 0, 50);
 //print(targetArray)
 		textSize(70)
+		textFont(aim)
 		fill(255, 247, 10)
 		text('Slay the enemys! Your score is ' + score + ' points!!',200, 100)
 
@@ -469,10 +475,12 @@ function easy(){
 		background(hell)
 //timer
 	textSize(50);
+	textFont(aim)
 	text(timerH, 0, 50);
 //print(targetArray)
 		textSize(70)
 		fill(255, 247, 10)
+		textFont(aim)
 		text('Slay the enemys! Your score is ' + score + ' points!!',200, 100)
 
 		 if (frameCount % 60 == 0 && timerH > 0) { // if the frameCount is divisible by 60, then a second has passed. it will stop at 0
@@ -585,7 +593,7 @@ function easy(){
 	fill(255)
 	textSize(50)
 	textFont(aim)
-	text('YOU WIN',900, 600)
+	text('YOU WIN',windowWidth/2, windowHeight/2)
 
 
 	}
@@ -595,11 +603,11 @@ function easy(){
 	if(playing){
 		reward.hide()
 		reward.pause()
-		playButton.html('Play Reword')
+		playButton.html('Play Reward')
 	}else{
 		reward.show()
 		reward.loop()
-		playButton.html('Pause Reword')	
+		playButton.html('Pause Reward')	
 		
 	}
 
